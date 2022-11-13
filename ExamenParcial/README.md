@@ -2,33 +2,33 @@
 
 ## Pregunta 1
 
-1. ![image-20221110085800274](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110085800274.png)
+1. ![image-20221112232213066](README.assets/image-20221112232213066.png)
 
    El código compila y da como resultado en la pantalla `"match"`, debido a que la función `check` de Panda verifica recibe como argumento el objeto `p1` y una expresión lambda de la interfaz `Predicate`, el cual va a verificar si la expresión booleana que involucra al objeto de tipo `Panda` es verdadera o no, mediante el método `test()`. Luego, dentro de `check()`, si la expresión es verdadera, devuelve `match`, como se espera, pues `p1.age=1` es menor que `5`.
 
 2. En la clase `Climber`, el método `check()` recibe como argumentos a la interfaz `Climb` y un entero que va a simbolizar la altura. Se le pasa como argumentos la expresión lambda `(h,m)->h.append(m).isEmpty()` y como altura `5`. Sin embargo, el programa no compila pues la expresión lambda está completando la definición del método `isTooHigh`, el cual recibe como parámetros dos números enteros, los cuales no tienen método `append()`. 
 
-   ![image-20221110091817332](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110091817332.png)
+   ![image-20221112232224077](README.assets/image-20221112232224077.png)
 
    Sin embargo, haciendo la corrección en la expresión de la manera `(h,m)->h>m`, se obtiene como verdadero cada vez que la altura sea mayor que el límite. Así, el programa retorna `"ok"`, pues `h=5 < 10`
 
-   ![image-20221110091837759](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110091837759.png)
+   ![image-20221112232234241](README.assets/image-20221112232234241.png)
 
 3. Se puede crear la expresión lambda de la línea `17`, que va a definir el método `magic` haciendo que reciba como argumento la variable `d (double)` y retorne `"Poof"`
 
-   ![image-20221110092645292](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110092645292.png)
+   ![image-20221112232244968](README.assets/image-20221112232244968.png)
 
    Ambos retornan el mismo `String`, a pesar que `s` no sea instancia de la clase `Secret1`
 
-   ![image-20221110092802437](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110092802437.png)
+   ![image-20221112232255051](README.assets/image-20221112232255051.png)
 
 4. Se añade el método main para poner a prueba el método `removeIf` con la expresión lambda que se le inserta
 
-   ![image-20221110094132839](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110094132839.png)
+   ![image-20221112232304755](README.assets/image-20221112232304755.png)
 
    Resulta que si funciona, pues si se le añaden caracteres fuera del rango de 'a' hasta 'z' (como '@'), entonces no los elimina
 
-   ![image-20221110094230774](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110094230774.png)
+   ![image-20221112232314311](README.assets/image-20221112232314311.png)
 
 5. El código tiene una variable que no se modifica, que es `length`.
    Se itera del 1 al 3. Si se tiene un número de iteración par, entonces se define al método `get()` de la interfaz `Supplier<Integer>` de manera que retorne el valor de `length` . Si se tiene un número de iteración impar, se crea una variable `j=i`. Y asi, se define al método `get` de la interfaz `Supplier<Integer>` para que retorne `j`. Así, se imprime `length` o `i` para cada iteración desde `i=0` hasta `i=2`.
@@ -41,13 +41,13 @@
 
 1. Al ejecutar el programa da la siguiente salida
 
-   ![image-20221110095416189](../../../../AppData/Roaming/Typora/typora-user-images/image-20221110095416189.png)
+   ![image-20221112232325631](README.assets/image-20221112232325631.png)
 
    Pues primero se añadieron a Cesar (VIP) y Jessica (no VIP) a un vuelo de negocios, luego se intentó eliminar a ambos pasajeros del vuelo, pudiendo solo eliminar a Jessica por no ser VIP. Luego, se añadió a Jessica a un vuelo económico y finalmente se imprimieron las listas de ambos vuelos.
 
 2. El código muestra una covertura de clases del 83%, lo cual se explica pues solo se han testeado las clases Flight y Passenger, de las cuales Flight solo cubrío 5 de sus 6 métodos, pues no se probó el método `getFlightType()`
 
-   ![image-20221112175739927](../../../../AppData/Roaming/Typora/typora-user-images/image-20221112175739927.png)
+   ![image-20221112232335495](README.assets/image-20221112232335495.png)
 
 3. Porque tener tres tipos de vuelos distintos para una sola clase hace necesario que tengamos que implementar el método `getFlightType()` con condicionales respecto al tipo de vuelo. En cambio, si se separa en 3 cases heredadas de una clase Flight, se tendrán definidos de antemano los tipos de vuelos, en lugar de tenerlos en tiempo de ejecución
 
@@ -263,10 +263,10 @@
    assertThat(customer.getCountry()).isEqualTo("US");
    ```
 
-   ![image-20221112230009862](../../../../AppData/Roaming/Typora/typora-user-images/image-20221112230009862.png)
+   ![image-20221112232347562](README.assets/image-20221112232347562.png)
 
 6. Al agregar el código nuevo a las pruebas, se observa que pasan sin problemas, confirmando que el metodo `calculate()` funciona correctamente.
 
-   ![image-20221112225521267](../../../../AppData/Roaming/Typora/typora-user-images/image-20221112225521267.png)
+   ![image-20221112232357817](README.assets/image-20221112232357817.png)
 
    
