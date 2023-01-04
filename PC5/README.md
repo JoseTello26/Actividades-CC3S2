@@ -106,6 +106,21 @@
     
       ![image-20230104012530836](README.assets/image-20230104012530836.png)
     
+    - Pipeline con prueba de aceptación ejecutado exitosamente
+    
+      ![image-20230104090226840](README.assets/image-20230104090226840.png)
+    
+  - ### Escribir pruebas orientadas a usuarios
+
+    - ![image-20230104090650413](README.assets/image-20230104090650413.png)
     - 
 
 - ## Actividad 24
+
+  - Instalación de cliente Kubernetes
+
+    ![image-20230104123146580](README.assets/image-20230104123146580.png)
+
+  - Inicialización de minikube
+
+    ![image-20230104124521928](README.assets/image-20230104124521928.png)
