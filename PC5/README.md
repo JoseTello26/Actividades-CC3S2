@@ -124,3 +124,81 @@
   - Inicialización de minikube
 
     ![image-20230104124521928](README.assets/image-20230104124521928.png)
+
+  - Información del cluster de kubernetes actual
+
+    ![image-20230104165717138](README.assets/image-20230104165717138.png)
+
+  - Creación de cluster de kubernetes mediante archivo `deployment.yaml`
+
+    ![image-20230104174312558](README.assets/image-20230104174312558.png)
+
+  - Se observan los 3 contenedores creados, como se especificó en el archivo YAML
+
+    ![image-20230104174633825](README.assets/image-20230104174633825.png)
+
+  - Se obtienen los logs de cada contenedor corriendo la aplicación calculator:
+
+    ![image-20230104174722765](README.assets/image-20230104174722765.png)
+
+  - Archivo `service.yaml` para crear el servicio a traves del cual se accederá a los contenedores creados
+
+    ![image-20230104175355126](README.assets/image-20230104175355126.png)
+
+    ![image-20230104180352671](README.assets/image-20230104180352671.png)
+
+  - Se observa que se puede acceder a Calculator a través de la ip de minikube usando el puerto 32731
+
+    ![image-20230104182932874](README.assets/image-20230104182932874.png)
+
+  - ### Kubernetes avanzado
+
+    - Escalando el servicio del proyecto 
+
+      ![image-20230104184142650](README.assets/image-20230104184142650.png)
+
+    - **Actualización de aplicación:** Se modifica el archivo `deployment.yaml` y se vuelve a construir la aplicación. Luego de esto, se observa que se han eliminado los contenedores anteriores.
+
+      ![image-20230104185000601](README.assets/image-20230104185000601.png)
+
+    - **Actualizaciones continuas:** Se busca que cada contenedor se elimine uno por uno y se lanze su nueva version hasta que todos los contenedores antiguos hayan sido reemplazados. Para ello se edita el archivo `deployment.yaml`
+
+      ![image-20230104190249888](README.assets/image-20230104190249888.png)
+
+      Los contenedores se actualizan uno por uno
+
+      ![image-20230104190401947](README.assets/image-20230104190401947.png)
+
+      Se eliminan los recursos creados
+
+      ![image-20230104190448630](README.assets/image-20230104190448630.png)
+
+  - ### Dependencias de la aplicación
+
+    - Se definen los recursos de despliegue y servicio de Hazelcast en el archivo `hazelcast.yaml`
+
+      ![image-20230104191110919](README.assets/image-20230104191110919.png)
+
+      ![image-20230104191059406](README.assets/image-20230104191059406.png)
+
+      ![image-20230104191855910](README.assets/image-20230104191855910.png)
+
+    - ### Implementación del sistema multiaplicación
+
+      - ![image-20230104202855417](README.assets/image-20230104202855417.png)
+
+      - ![image-20230104202913277](README.assets/image-20230104202913277.png)
+
+      - Enviando la imagen con el proyecto compilado a dockerhub
+
+        ![image-20230104205905992](README.assets/image-20230104205905992.png)
+
+      - Ejecución de calculador en minikube
+
+        ![image-20230104205945472](README.assets/image-20230104205945472.png)
+
+      - Probando la solicitud hacia la aplicación Calculador:
+
+        ![image-20230104210023096](README.assets/image-20230104210023096.png)
+
+        
