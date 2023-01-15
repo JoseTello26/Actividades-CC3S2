@@ -1,7 +1,7 @@
 # Examen Final
 
 1. Los clientes se conectan a una sola interfaz de red del servidor con los microservicios y este se encarga de redirigir la dirección y el puerto al microservicio especificado
-2. -
+2. Al comenzar el desarrollo, no todos los servicios implementados seran microservicios expuestos al cliente, pues estarán aun en etapa de desarrollo o de prueba, por lo que se pueden ocultar a través de una API que exponga los servicios disponibles y aisle aquellos que no.
 3. -
 4. - Dado que las instancias de microservicios deben ser idénticas en su mayoría, bastaría con hacer un commit del contenedor docker donde se están ejecutando, y esa imagen creada se podría usar para crear nuevos contenedores.
    - Se puede actualizar la imagen y luego volver a cear las instancias de microservicios
